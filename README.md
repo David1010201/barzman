@@ -27,13 +27,16 @@ Site vitrine haut de gamme et interactif pour **BARZMAN**, service exclusif de b
 
 ---
 
-## 💻 Aperçu & Lancement Local
-Le site est un fichier autonome moderne (`index.html`) prêt à être publié sans dépendance complexe.
-Le serveur de prévisualisation tourne actuellement sur :
-👉 **http://localhost:3030**
+## 🌐 Liens de Déploiement & Production
+- **URL Principale Vercel (Production) :** 👉 **https://barzman.vercel.app**
+- **URL GitHub Pages :** 👉 **https://david1010201.github.io/barzman/**
+- **Dépôt GitHub :** 👉 **https://github.com/David1010201/barzman**
 
-Pour le relancer à tout moment :
+---
+
+## 💻 Aperçu Local & Redéploiement
+Pour mettre à jour en production sur Vercel à tout moment :
 ```bash
-cd /Users/raphaelsiva/.gemini/antigravity/scratch/barzman
-python3 -m http.server 3030
+vercel --prod --yes
 ```
+
