@@ -94,7 +94,7 @@
         <a href="#concept" class="hover:text-gold-400 transition">Le Concept</a>
         <a href="#formules" class="hover:text-gold-400 transition">Formules</a>
         <a href="#cocktails" class="hover:text-gold-400 transition">Carte</a>
-        <a href="#simulateur" class="hover:text-gold-400 transition">Simulateur</a>
+        <a href="#experience" class="hover:text-gold-400 transition">L'Expérience</a>
         <a href="#localisation" class="hover:text-gold-400 transition">Contact</a>
       </nav>
 
@@ -475,96 +475,112 @@
     </div>
   </section>
 
-  <!-- SIMULATEUR DE DEVIS INSTANTANÉ -->
-  <section id="simulateur" class="py-24 bg-dark-950 relative">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+  <!-- L'EXPÉRIENCE & LE DÉROULEMENT -->
+  <section id="experience" class="py-24 bg-dark-950 relative overflow-hidden">
+    <!-- Atmospheric lighting -->
+    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[350px] bg-gold-500/10 rounded-full blur-[140px] pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
       
-      <div class="glass-panel rounded-3xl p-8 sm:p-12 border-gold-500/40 gold-border-glow">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-gold-400 text-xs uppercase tracking-widest font-semibold">Sérénité & Savoir-Faire</span>
+        <h2 class="text-3xl sm:text-5xl font-serif font-bold text-white mt-2">Le Déroulement de Votre Soirée</h2>
+        <div class="w-16 h-1 bg-gold-500 mx-auto mt-4 rounded-full"></div>
+        <p class="text-gray-400 mt-4 text-base">Un protocole fluide et discret pour que vous n'ayez qu'une seule mission : profiter de vos invités.</p>
+      </div>
+
+      <!-- 4 Étapes Clés -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
         
-        <div class="text-center mb-10">
-          <span class="text-gold-400 text-xs uppercase tracking-widest font-semibold">Devis Immédiat</span>
-          <h2 class="text-3xl sm:text-4xl font-serif font-bold text-white mt-2">Simulateur Tarifaire</h2>
-          <p class="text-gray-400 text-sm mt-2">Ajustez les paramètres de votre événement pour une estimation claire en quelques secondes.</p>
+        <!-- Étape 1 -->
+        <div class="glass-panel rounded-3xl p-8 relative hover:-translate-y-1.5 transition duration-300">
+          <div class="w-12 h-12 rounded-2xl bg-gold-500/10 border border-gold-500/30 text-gold-400 font-serif font-black text-xl flex items-center justify-center mb-6">
+            01
+          </div>
+          <span class="text-[11px] uppercase tracking-wider text-gold-400 font-semibold">Avant l'événement</span>
+          <h3 class="text-xl font-serif font-bold text-white mt-1 mb-3">Carte & Accords</h3>
+          <p class="text-xs text-gray-400 leading-relaxed">
+            Échange direct par téléphone ou WhatsApp pour définir vos cocktails fétiches, alcools nobles et adapter la carte au profil de vos invités.
+          </p>
         </div>
 
-        <div class="space-y-8">
-          
-          <!-- Slider Convives -->
-          <div>
-            <div class="flex justify-between items-center mb-2">
-              <label class="text-sm font-semibold text-white">Nombre de convives :</label>
-              <span id="guestsValue" class="text-xl font-bold text-gold-400 font-serif">25 personnes</span>
-            </div>
-            <input type="range" id="guestsRange" min="5" max="150" step="5" value="25" 
-                   class="w-full h-2.5 bg-dark-800 rounded-lg appearance-none cursor-pointer accent-gold-500"
-                   oninput="updateCalculation()">
-            <div class="flex justify-between text-xs text-gray-500 mt-2 font-medium">
-              <span>5 pers. (Intime)</span>
-              <span>25 pers.</span>
-              <span>50 pers.</span>
-              <span>150+ pers.</span>
-            </div>
+        <!-- Étape 2 -->
+        <div class="glass-panel rounded-3xl p-8 relative hover:-translate-y-1.5 transition duration-300">
+          <div class="w-12 h-12 rounded-2xl bg-gold-500/10 border border-gold-500/30 text-gold-400 font-serif font-black text-xl flex items-center justify-center mb-6">
+            02
           </div>
-
-          <!-- Choix Formule -->
-          <div>
-            <label class="block text-sm font-semibold text-white mb-3">Formule souhaitée :</label>
-            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
-              <label class="cursor-pointer border border-white/10 rounded-2xl p-4 flex flex-col items-center text-center bg-dark-900 hover:border-gold-400 transition" id="label-formule-solo">
-                <input type="radio" name="formule" value="solo" class="hidden" onchange="updateCalculation()">
-                <span class="text-sm font-bold text-white">Barman Solo</span>
-                <span class="text-xs text-gray-400 mt-1">Service & Shakers</span>
-              </label>
-
-              <label class="cursor-pointer border border-gold-500 bg-gold-500/10 rounded-2xl p-4 flex flex-col items-center text-center transition" id="label-formule-cle">
-                <input type="radio" name="formule" value="cle" checked class="hidden" onchange="updateCalculation()">
-                <span class="text-sm font-bold text-white">Clé en Main Full</span>
-                <span class="text-xs text-gold-300 mt-1">Bar + Ingrédients + Verrerie</span>
-              </label>
-
-              <label class="cursor-pointer border border-white/10 rounded-2xl p-4 flex flex-col items-center text-center bg-dark-900 hover:border-gold-400 transition" id="label-formule-atelier">
-                <input type="radio" name="formule" value="atelier" class="hidden" onchange="updateCalculation()">
-                <span class="text-sm font-bold text-white">Masterclass Atelier</span>
-                <span class="text-xs text-gray-400 mt-1">Cours & Ateliers</span>
-              </label>
-            </div>
-          </div>
-
-          <!-- Zone -->
-          <div>
-            <label class="block text-sm font-semibold text-white mb-2">Lieu de la réception :</label>
-            <select id="locationSelect" class="w-full bg-dark-900 border border-white/15 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-gold-400 transition" onchange="updateCalculation()">
-              <option value="paris">Paris Intramuros (75001 à 75020)</option>
-              <option value="petite-couronne">Petite Couronne (92 Hauts-de-Seine, 93, 94)</option>
-              <option value="grande-couronne">Grande Couronne (78 Yvelines, 91, 95, 77)</option>
-            </select>
-          </div>
-
-          <!-- Résultat Box -->
-          <div class="bg-dark-900/90 border border-gold-500/40 rounded-2xl p-6 text-center shadow-lg">
-            <div class="text-xs uppercase tracking-wider text-gray-400 font-semibold">Estimation Indicative TTC</div>
-            <div id="estimatedPrice" class="text-4xl sm:text-5xl font-serif font-black text-gold-400 my-2">~ 530 € TTC</div>
-            <p id="detailsPrice" class="text-xs text-gray-300 max-w-lg mx-auto">Comprend le bar mobile, le barman professionnel, la verrerie cristal et les ingrédients pour 25 personnes.</p>
-          </div>
-
-          <!-- Validation / Call / WhatsApp -->
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
-            <a id="btnWhatsApp" href="https://wa.me/33768157248?text=Bonjour%20BARZMAN,%20je%20souhaite%20un%20devis%20pour%2025%20personnes%20en%20formule%20Cl%C3%A9%20en%20Main%20%C3%A0%20Paris." 
-               target="_blank" rel="noopener"
-               class="py-4 px-6 rounded-2xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-center text-sm flex items-center justify-center space-x-2.5 transition shadow-lg shadow-emerald-950/40 hover:scale-[1.02] active:scale-95">
-              <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.007c.106.005.249-.04.39.299.144.347.491 1.2.534 1.287.043.087.072.188.014.303-.058.116-.087.188-.173.289l-.26.303c-.087.087-.177.182-.076.355.101.173.45 1.742 1.97 2.417.195.086.347.137.466.175.196.062.374.053.515.032.157-.023.491-.201.56-.395.069-.194.069-.361.048-.396-.021-.035-.079-.056-.166-.1-.087-.044-.52-.257-.601-.297-.081-.04-.14-.06-.199.04-.059.1-.231.297-.283.355-.052.058-.104.065-.191.022zM12 2C6.477 2 2 6.477 2 12c0 1.891.524 3.66 1.434 5.176L2 22l4.981-1.306A9.957 9.957 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2z"/></svg>
-              <span>Envoyer cette demande sur WhatsApp</span>
-            </a>
-
-            <a href="tel:+33768157248" 
-               class="py-4 px-6 rounded-2xl bg-gradient-to-r from-gold-500 to-gold-400 text-dark-950 font-bold text-center text-sm flex items-center justify-center space-x-2.5 transition shadow-lg shadow-gold-500/25 hover:brightness-110 hover:scale-[1.02] active:scale-95">
-              <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.02-.24c1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57a1 1 0 01-.25 1.02l-2.2 2.2z"/></svg>
-              <span>Appeler : 07 68 15 72 48</span>
-            </a>
-          </div>
-
+          <span class="text-[11px] uppercase tracking-wider text-gold-400 font-semibold">1h Avant Vos Invités</span>
+          <h3 class="text-xl font-serif font-bold text-white mt-1 mb-3">Mise en Place VIP</h3>
+          <p class="text-xs text-gray-400 leading-relaxed">
+            Arrivée discrète de votre mixologue. Montage du bar mobile compact, disposition de la verrerie cristal, herbes fraîches et glace pure taillée.
+          </p>
         </div>
 
+        <!-- Étape 3 -->
+        <div class="glass-panel rounded-3xl p-8 relative hover:-translate-y-1.5 transition duration-300">
+          <div class="w-12 h-12 rounded-2xl bg-gold-500/10 border border-gold-500/30 text-gold-400 font-serif font-black text-xl flex items-center justify-center mb-6">
+            03
+          </div>
+          <span class="text-[11px] uppercase tracking-wider text-gold-400 font-semibold">Durant la Soirée</span>
+          <h3 class="text-xl font-serif font-bold text-white mt-1 mb-3">Le Show & Service</h3>
+          <p class="text-xs text-gray-400 leading-relaxed">
+            Service haute couture au shaker, fumage minute, présentations raffinées et convivialité. Vos convives savourent des créations d'exception.
+          </p>
+        </div>
+
+        <!-- Étape 4 -->
+        <div class="glass-panel rounded-3xl p-8 relative hover:-translate-y-1.5 transition duration-300">
+          <div class="w-12 h-12 rounded-2xl bg-gold-500/10 border border-gold-500/30 text-gold-400 font-serif font-black text-xl flex items-center justify-center mb-6">
+            04
+          </div>
+          <span class="text-[11px] uppercase tracking-wider text-gold-400 font-semibold">Fin de Prestation</span>
+          <h3 class="text-xl font-serif font-bold text-white mt-1 mb-3">Remise en État Propre</h3>
+          <p class="text-xs text-gray-400 leading-relaxed">
+            Rangement complet, nettoyage minutieux de votre espace cuisine et du comptoir, évacuation de la verrerie. Zéro corvée pour vous.
+          </p>
+        </div>
+
+      </div>
+
+      <!-- BANNER DEVIS SUR-MESURE & DIRECT CALL -->
+      <div class="glass-panel rounded-3xl p-8 sm:p-12 border-gold-500/40 gold-border-glow text-center max-w-4xl mx-auto">
+        <span class="text-gold-400 text-xs uppercase tracking-widest font-semibold">Devis Personnalisé Gratuit</span>
+        <h3 class="text-2xl sm:text-4xl font-serif font-bold text-white mt-2 mb-4">
+          Un Projet de Soirée à Paris ou en Île-de-France ?
+        </h3>
+        <p class="text-gray-300 text-sm max-w-2xl mx-auto leading-relaxed mb-8">
+          Partagez-nous vos dates, le lieu et vos envies. Nous vous répondons en moins de 2 heures avec une formule sur-mesure au juste prix.
+        </p>
+
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a href="tel:+33768157248" 
+             class="w-full sm:w-auto px-8 py-4 rounded-2xl bg-gradient-to-r from-gold-500 via-gold-400 to-gold-500 text-dark-950 font-bold text-sm tracking-wide uppercase hover:scale-105 active:scale-95 transition-all shadow-xl shadow-gold-500/25 flex items-center justify-center space-x-3">
+            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.02-.24c1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57a1 1 0 01-.25 1.02l-2.2 2.2z"/></svg>
+            <span>Appeler le 07 68 15 72 48</span>
+          </a>
+
+          <a href="https://wa.me/33768157248?text=Bonjour%20BARZMAN,%20je%20souhaite%20un%20devis%20personnalis%C3%A9%20pour%20une%20soir%C3%A9e%20priv%C3%A9e%20%C3%A0%20domicile." 
+             target="_blank" rel="noopener"
+             class="w-full sm:w-auto px-8 py-4 rounded-2xl bg-emerald-600 hover:bg-emerald-500 text-white font-semibold text-sm tracking-wide transition-all flex items-center justify-center space-x-3 shadow-lg shadow-emerald-950/40 hover:scale-105 active:scale-95">
+            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.007c.106.005.249-.04.39.299.144.347.491 1.2.534 1.287.043.087.072.188.014.303-.058.116-.087.188-.173.289l-.26.303c-.087.087-.177.182-.076.355.101.173.45 1.742 1.97 2.417.195.086.347.137.466.175.196.062.374.053.515.032.157-.023.491-.201.56-.395.069-.194.069-.361.048-.396-.021-.035-.079-.056-.166-.1-.087-.044-.52-.257-.601-.297-.081-.04-.14-.06-.199.04-.059.1-.231.297-.283.355-.052.058-.104.065-.191.022zM12 2C6.477 2 2 6.477 2 12c0 1.891.524 3.66 1.434 5.176L2 22l4.981-1.306A9.957 9.957 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2z"/></svg>
+            <span>Demande via WhatsApp</span>
+          </a>
+        </div>
+
+        <div class="mt-6 flex flex-wrap justify-center items-center gap-6 text-xs text-gray-400">
+          <span class="flex items-center space-x-1.5">
+            <span class="text-gold-400 font-bold">✓</span>
+            <span>Réponse rapide en moins de 2h</span>
+          </span>
+          <span class="flex items-center space-x-1.5">
+            <span class="text-gold-400 font-bold">✓</span>
+            <span>Déplacement 75 et tous départements IDF</span>
+          </span>
+          <span class="flex items-center space-x-1.5">
+            <span class="text-gold-400 font-bold">✓</span>
+            <span>Prestation 100% à domicile</span>
+          </span>
+        </div>
       </div>
 
     </div>
@@ -780,68 +796,6 @@
         closeLegalModal();
       }
     });
-
-    function updateCalculation() {
-      const guests = parseInt(document.getElementById('guestsRange').value, 10);
-      document.getElementById('guestsValue').textContent = `${guests} personnes`;
-
-      const formuleRadios = document.getElementsByName('formule');
-      let formule = 'cle';
-      for (const radio of formuleRadios) {
-        if (radio.checked) {
-          formule = radio.value;
-          break;
-        }
-      }
-
-      const labelSolo = document.getElementById('label-formule-solo');
-      const labelCle = document.getElementById('label-formule-cle');
-      const labelAtelier = document.getElementById('label-formule-atelier');
-      
-      [labelSolo, labelCle, labelAtelier].forEach(el => {
-        el.className = "cursor-pointer border border-white/10 rounded-2xl p-4 flex flex-col items-center text-center bg-dark-900 hover:border-gold-400 transition";
-      });
-
-      if (formule === 'solo') {
-        labelSolo.className = "cursor-pointer border border-gold-500 bg-gold-500/10 rounded-2xl p-4 flex flex-col items-center text-center transition";
-      } else if (formule === 'cle') {
-        labelCle.className = "cursor-pointer border border-gold-500 bg-gold-500/10 rounded-2xl p-4 flex flex-col items-center text-center transition";
-      } else if (formule === 'atelier') {
-        labelAtelier.className = "cursor-pointer border border-gold-500 bg-gold-500/10 rounded-2xl p-4 flex flex-col items-center text-center transition";
-      }
-
-      const location = document.getElementById('locationSelect').value;
-      let travelFee = 0;
-      if (location === 'petite-couronne') travelFee = 35;
-      if (location === 'grande-couronne') travelFee = 65;
-
-      let estimated = 0;
-      let formulaLabel = "";
-      let detailText = "";
-
-      if (formule === 'solo') {
-        formulaLabel = "Barman Solo";
-        estimated = 250 + (guests > 35 ? Math.ceil((guests - 35) / 30) * 180 : 0) + travelFee;
-        detailText = `Barman professionnel dédié (jusqu'à 4h de service). Matériel de mixologie pro inclus.`;
-      } else if (formule === 'cle') {
-        formulaLabel = "Clé en Main Full";
-        estimated = 280 + (guests * 17) + travelFee;
-        detailText = `Comprend le bar mobile, le barman professionnel, la verrerie cristal et les ingrédients pour ${guests} personnes.`;
-      } else if (formule === 'atelier') {
-        formulaLabel = "Masterclass Atelier";
-        estimated = Math.max(350, guests * 45) + travelFee;
-        detailText = `Cours interactif de mixologie, kits de shakers pour les invités et dégustation guidée.`;
-      }
-
-      document.getElementById('estimatedPrice').textContent = `~ ${estimated} € TTC`;
-      document.getElementById('detailsPrice').textContent = detailText;
-
-      const locText = location === 'paris' ? 'Paris Intramuros' : (location === 'petite-couronne' ? 'Petite Couronne IDF' : 'Grande Couronne IDF');
-      const waMsg = encodeURIComponent(`Bonjour BARZMAN, je souhaite un devis pour mon événement :\n- Nombre de convives : ${guests} personnes\n- Formule : ${formulaLabel}\n- Lieu : ${locText}\n- Estimation : ~${estimated}€ TTC`);
-      document.getElementById('btnWhatsApp').href = `https://wa.me/33768157248?text=${waMsg}`;
-    }
-
-    updateCalculation();
   </script>
 </body>
 </html>
